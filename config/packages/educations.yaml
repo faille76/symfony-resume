@@ -1,0 +1,66 @@
+parameters:
+    educations:
+        education-first:
+            start_date: "2016-07-18"
+            end_date: "2016-12-16"
+            short_name: "EF"
+            long_name: "Education First"
+            description: "International school for English improvement abroad."
+            modules:
+                - "Intensive English course"
+                - "SPIN class: TOEIC / Movie / Music / Culture / News / Vocabulary / Business"
+            score: "B2-3"
+            location: "Brisbane, Australia & Auckland, New Zealand"
+            url: "https://www.ef.com/"
+            image: "educations/ef.svg"
+
+        epitech:
+            start_date: "2015-09-01"
+            end_date: "2020-09-01"
+            short_name: "Epitech"
+            long_name: "European Institute of Information Technology"
+            description: "Innovation technology and computing expertise school. (Master degree)"
+            modules:
+                - "Software engineering and computer science classes"
+                - "Advanced C & C++"
+                - "Advanced UNIX Programming"
+                - "System Security"
+                - "Java"
+                - "Infographics programming"
+                - "Advanced databases SQL"
+                - "Network and OS Management"
+            score: "GPA: 3.56/4.00"
+            location: "Rennes & Paris, France"
+            url: "https://www.epitech.eu/en/"
+            image: "educations/epitech.svg"
+
+        csulb:
+            start_date: "2018-10-01"
+            end_date: "2019-05-20"
+            short_name: "CSULB"
+            long_name: "California State University Long Beach"
+            description: "International year, exchange student with study abroad."
+            modules:
+                - "American Language Institute Certification (ALI)"
+                - "CECS 326 – Operating Systems"
+                - "CECS 453 – Mobile Application Development"
+                - "CECS 475 – Software Development with Frameworks"
+                - "CECS 445 – Software Design and Architecture"
+            score: "GPA: 3.00/4.00"
+            location: "Long beach, USA"
+            url: "https://www.csulb.edu/"
+            image: "educations/csulb.png"
+
+        uc-berkeley:
+            start_date: "2019-06-01"
+            end_date: "2019-08-24"
+            short_name: "UC Berkeley"
+            long_name: "University of California Berkeley"
+            description: "Summer Session on Computer sciences."
+            modules:
+                - "CS 61A - Structure and Interpretation of Computer Programs"
+                - "CS 162 - Operating Systems and Systems Programming"
+            score: "GPA: 3.30/4.00"
+            location: "San Francisco, Berkeley, USA"
+            url: "https://www.berkeley.edu/"
+            image: "educations/berkeley.png"

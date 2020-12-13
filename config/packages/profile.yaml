@@ -1,0 +1,67 @@
+parameters:
+    profile:
+        first_name: "Frederic"
+        last_name: "Oddou"
+        birthday: "1996-11-25"
+        job_title: "Software developer"
+        description:
+            - "Hello, I am Frederic, 24 years old."
+            - "I am back-end developer, specialized in PHP/Symfony. I am curious about new technologies and I love challenges."
+        tags:
+            - "frederic oddou"
+            - "software developer"
+            - "back-end developer"
+            - "programmer"
+            - "web developer"
+            - "master degree"
+            - "epitech"
+            - "uc berkeley"
+            - "france televisions"
+            - "netfoxmaking"
+            - "pagesjaunes"
+            - "klaxoon"
+            - "php"
+            - "symfony"
+            - "mysql"
+            - "rest"
+            - "api"
+            - "devops"
+            - "git"
+            - "java"
+            - "high traffic"
+            - "rabbitmq"
+            - "google cloud platform"
+            - "resume"
+        resume_file: "CV-Resume-Frederic-ODDOU.pdf"
+        interests:
+            -
+                name: "Travel"
+                icon: "fas fa-plane-departure"
+            -
+                name: "Driving"
+                icon: "fas fa-car"
+            -
+                name: "Badminton and running"
+                icon: "fas fa-running"
+            -
+                name: "Music"
+                icon: "fas fa-music"
+            -
+                name: "New technologies"
+                icon: "fas fa-sitemap"
+            -
+                name: "Cinema"
+                icon: "fas fa-film"
+        contact:
+            email: "frederic1.oddou@gmail.com"
+            phone_number: "+33 6 69 21 42 02"
+            address: "92370 Chaville, IDF, France"
+            social:
+                github: "https://github.com/faille76"
+                linkedin: "https://www.linkedin.com/in/fredericoddou"
+        strength:
+            - "Experience in high traffic applications."
+            - "Capable of designing and developing a micro services architecture."
+            - "Very fast integration and skill building."
+            - "Experience working in scrum and agile method."
+            - "Rigorous in development processes: Patterns, Code style, Gitflow, Testing (unit, functional), Code review, production release."

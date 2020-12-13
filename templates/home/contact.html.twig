@@ -1,0 +1,80 @@
+<section id="contact" class="contact-section my-5 wow fadeIn mt-5" data-wow-delay="0.1s">
+
+    <div class="container">
+        <div class="card bg-dark-custom">
+            <div class="row">
+                <div class="col-lg-8">
+                    <div class="card-body form px-5">
+                        <h3 class="mt-4"><i class="fas fa-envelope pr-2"></i>{% trans %}contact.title{% endtrans %}</h3>
+
+                        <form role="form" method="post" action="{{ path('contact') }}" id="contact-form">
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <div class="md-form mb-0">
+                                        <input type="text" id="form-contact-name" class="form-control" name="name" required />
+                                        <label for="form-contact-name">{% trans %}contact.name{% endtrans %}</label>
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="md-form mb-0">
+                                        <input type="email" id="form-contact-email" class="form-control" name="email" required />
+                                        <label for="form-contact-email">{% trans %}contact.email{% endtrans %}</label>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="md-form mb-0">
+                                <textarea id="form-contact-message" class="form-control md-textarea" rows="3" name="message" required></textarea>
+                                <label for="form-contact-message">{% trans %}contact.message{% endtrans %}</label>
+                                <button class="g-recaptcha btn-floating btn-lg blue text-white"
+                                        data-sitekey="{{ google_recaptcha3_public }}"
+                                        data-callback='contactOnSubmit'
+                                        data-action='submit'>
+                                    <i class="far fa-paper-plane"></i>
+                                </button>
+                            </div>
+                            <br />
+                        </form>
+
+                        <span class="text-success" id="form-contact-success" hidden="hidden"></span>
+                        <span class="text-danger" id="form-contact-error" hidden="hidden"></span>
+
+                    </div>
+                </div>
+
+                <div class="col-lg-4">
+                    <div class="card-body special-color text-center h-100 white-text">
+
+                        <h3 class="my-4 pb-2">{% trans %}contact.information{% endtrans %}</h3>
+                        <ul class="text-lg-left list-unstyled ml-4">
+                            {% if profile.address is not null %}
+                                <li>
+                                    <p><i class="fas fa-map-marker-alt pr-2"></i>{{ profile.address }}</p>
+                                </li>
+                            {% endif %}
+                            {% if profile.phoneNumber is not null %}
+                                <li>
+                                    <p><i class="fas fa-phone pr-2"></i>{{ profile.phoneNumber }}</p>
+                                </li>
+                            {% endif %}
+                            <li>
+                                <p><i class="fas fa-envelope pr-2"></i>{{ profile.email }}</p>
+                            </li>
+                        </ul>
+                        <hr class="hr-light my-4">
+                        <ul class="list-inline text-center list-unstyled">
+                            {% if profile.linkedin is not null %}
+                                <a class="btn-floating btn-lg btn-li text-white" href="{{ profile.linkedin }}" target="_blank"><i class="fab fa-linkedin-in"></i></a>
+                            {% endif %}
+                            {% if profile.github is not null %}
+                                <a class="btn-floating btn-lg btn-git text-white" href="{{ profile.github }}" target="_blank"><i class="fab fa-github"></i></a>
+                            {% endif %}
+                        </ul>
+
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

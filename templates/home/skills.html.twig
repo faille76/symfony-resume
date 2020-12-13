@@ -1,0 +1,30 @@
+<h1 id="skills" class="text-center">{% trans %}skills.title{% endtrans %}</h1>
+
+<section class="wow fadeIn mt-5" data-wow-delay="0.1s">
+    <div class="container mb-5">
+        <div class="card bg-dark-custom">
+            <div class="px-4 my-5">
+                <div class="row">
+                    <div class="col-lg-6 col-sm-12">
+                        <h3>{% trans %}skills.technical_skills{% endtrans %}</h3>
+
+                        <ul class="content-skills mt-3">
+                            {% for techno in technos %}
+                                <li>{{ techno.label }}</li>
+                            {% endfor %}
+                        </ul>
+                    </div>
+
+                    <div class="col-lg-6 col-sm-12">
+                        <h3>{% trans %}skills.strength{% endtrans %}</h3>
+                        <ul class="strength-text">
+                            {% for strength in profile.strength %}
+                                <li>{{ strength }}</li>
+                            {% endfor %}
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

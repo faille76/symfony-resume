@@ -1,0 +1,54 @@
+# This file is the entry point to configure your own services.
+# Files in the packages/ subdirectory configure your dependencies.
+
+# Put parameters here that don't need to change on each machine where the app is deployed
+# https://symfony.com/doc/current/best_practices/configuration.html#application-related-configuration
+parameters:
+
+services:
+    # default configuration for services in *this* file
+    _defaults:
+        autowire: true      # Automatically injects dependencies in your services.
+        autoconfigure: true # Automatically registers your services as commands, event subscribers, etc.
+
+    # makes classes in src/ available to be used as services
+    # this creates a service per class whose id is the fully-qualified class name
+    Fredoddou\Resume\:
+        resource: '../src/'
+        exclude:
+            - '../src/Kernel.php'
+
+    # controllers are imported separately to make sure services can be injected
+    # as action arguments even if you don't extend any base controller class
+    Fredoddou\Resume\Infrastructure\Primary\Http\:
+        resource: '../src/Infrastructure/Primary/Http'
+        tags: ['controller.service_arguments']
+
+    # add more service definitions when explicit configuration is needed
+    # please note that last definitions always *replace* previous ones
+
+    Fredoddou\Resume\Domain\Techno\TechnoFactory: ~
+    Fredoddou\Resume\Domain\Techno\TechnoCollection:
+        factory: ['@Fredoddou\Resume\Domain\Techno\TechnoFactory', 'create']
+        arguments: ['%technos%']
+
+    Fredoddou\Resume\Domain\Education\EducationFactory: ~
+    Fredoddou\Resume\Domain\Education\EducationCollection:
+        factory: ['@Fredoddou\Resume\Domain\Education\EducationFactory', 'create']
+        arguments: ['%educations%']
+
+    Fredoddou\Resume\Domain\Experience\ExperienceFactory: ~
+    Fredoddou\Resume\Domain\Experience\ExperienceCollection:
+        factory: ['@Fredoddou\Resume\Domain\Experience\ExperienceFactory', 'create']
+        arguments: ['%experiences%']
+
+    Fredoddou\Resume\Domain\Project\ProjectFactory: ~
+    Fredoddou\Resume\Domain\Project\ProjectCollection:
+        factory: ['@Fredoddou\Resume\Domain\Project\ProjectFactory', 'create']
+        arguments: ['%projects%']
+
+
+    Fredoddou\Resume\Domain\Profile\ProfileFactory: ~
+    Fredoddou\Resume\Domain\Profile\Profile:
+        factory: ['@Fredoddou\Resume\Domain\Profile\ProfileFactory', 'create']
+        arguments: ['%profile%']

@@ -1,0 +1,19 @@
+{% macro date_interval(startDate, endDate) %}
+    {% if endDate is not null %}
+        {% set startYear = startDate|date('Y') %}
+        {% set startMonth = startDate|date('M') %}
+        {% set endYear = endDate|date('Y') %}
+        {% set endMonth = endDate|date('M') %}
+
+        {% if startYear == endYear %}
+            {% if startMonth != endMonth %}
+                {{ startMonth }} -
+            {% endif %}
+        {% else %}
+            {{ startDate|date('M Y') }} -
+        {% endif %}
+        {{ endDate|date('M Y') }}
+    {% else %}
+        {% trans %}date.since{% endtrans %} {{ startDate|date('M Y') }}
+    {% endif %}
+{% endmacro %}

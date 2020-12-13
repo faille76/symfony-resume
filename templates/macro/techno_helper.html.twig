@@ -1,0 +1,8 @@
+{% macro context(technoContexts) %}
+    {% for technoContext in technoContexts %}
+        <li{% if technoContext.context is not null %} data-toggle="tooltip" title="{{ technoContext.context }}"{% endif %}>
+            {{ technoContext.techno.label }}
+            {% if technoContext.context is not null %}<span class="text-success">&bull;</span>{% endif %}
+        </li>
+    {% endfor %}
+{% endmacro %}

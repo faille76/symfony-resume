@@ -1,0 +1,16 @@
+<h1 id="interests" class="text-center mt-5">{% trans %}interests.title{% endtrans %}</h1>
+
+<section class="wow fadeIn mt-5" data-wow-delay="0.1s">
+    <div class="container">
+        <div class="jumbotron jumbotron-fluid bg-dark-custom text-center py-3">
+            <div class="row">
+                {% for interest in profile.interests %}
+                    <div class="col">
+                        <i class="{{ interest.icon }}"></i><br />
+                        {{ interest.name }}
+                    </div>
+                {% endfor %}
+            </div>
+        </div>
+    </div>
+</section>

@@ -1,0 +1,185 @@
+parameters:
+    experiences:
+        usl-badminton:
+            start_date: "2012-09-01"
+            end_date: "2015-08-31"
+            name: "USL-Badminton"
+            role: "Volunteer"
+            description: "USL-Badminton is a badminton club in Normandy, France where there are national competitors and recreational players."
+            missions:
+                - "Development of a website that allows players to register for tournaments."
+                - "Management of the newsletter and social networks."
+                - "Advertising creation for sporting events."
+            technos: ~
+            location: "Lillebonne, Normandy, France"
+            url: "https://usl-badminton.fr/"
+            image: "experiences/usl-badminton.png"
+
+        netfoxmaking:
+            start_date: "2014-11-01"
+            end_date: "2019-11-30"
+            name: "NetFoxMaking"
+            role: "Freelancer"
+            description: "Individual business created when I came of age, to benefit from my development services to individuals and professionals."
+            missions:
+                - "Developing web sites for associations and private individual with NetCMS (own creation)."
+                - "Managing and developing games by web browsers."
+                - "Developing scripts and programs on demand."
+                - "Management of an infrastructure of multiple websites with automated deployments."
+            technos:
+                php-7: ~
+                php-5: ~
+                html-css-js: ~
+                symfony: "Using Symfony 4 and Symfony 5 to develop NetCMS."
+                smarty-php: "Used Smarty PHP as principal Framework for few years."
+                gitlab-ci: "Using GitLab CI to test and deploy application to pre-prod and production environment."
+                nginx: ~
+                apache2: ~
+                varnish: "Installed Varnish to manage cache for static web application."
+                plesk: ~
+                vesta-cp: "Used VestaCP as the first panel control after the custom server installation and before dockerizing applications."
+                bootstrap: ~
+                twig: "Using Twig with a custom framework, then using twig with Symfony."
+                mysql: ~
+                elasticsearch: "Using ElasticSearch for monitoring (ELK) and log application."
+            location: "France"
+            image: "experiences/netfoxmaking.png"
+
+        epitech-ta:
+            start_date: "2017-02-01"
+            end_date: "2018-02-28"
+            name: "EPITECH"
+            role: "Teaching Assistant"
+            description: "In parallel with my studies, I supervised and helped the younger promotions as a teaching assistant."
+            missions:
+                - "Responsible for the training that includes follow up and projects defense."
+                - "Able to explain concepts in the field of programming skills (C, UNIX/Linux, SQL)."
+                - "Responsible for local French module."
+            technos:
+                c: ~
+                cpp: ~
+                mysql: ~
+                shell: ~
+                jenkins: "Using Jenkins to run the tests of the student's project."
+            location: "Rennes, France"
+            url: "https://www.epitech.eu/"
+            image: "experiences/epitech.png"
+
+        epita-ta:
+            start_date: "2017-09-01"
+            end_date: "2018-05-28"
+            name: "EPITA"
+            role: "Teaching Assistant"
+            description: "Epita is an engineering school based on computer science."
+            missions:
+                - "Helping students during the practical works in OCaml and C#."
+                - "Project evaluation and competitive exam surveillance."
+            technos:
+                c-sharp: ~
+                ocaml: ~
+            location: "Rennes, France"
+            url: "https://www.epita.fr/"
+            image: "experiences/epita.svg"
+
+        pages-jaunes:
+            start_date: "2017-04-01"
+            end_date: "2017-08-31"
+            name: "PagesJaunes SA"
+            role: "Software Engineer Intern"
+            description: "PagesJaunes SA offers local advertising and information services via internet, mobile, and print media."
+            missions:
+                - "Migrating RabbitMQ and traceability support to ServiceBus (Microsoft Azure) and Datastore (GCP) technologies using Java (Spring)."
+                - "Developing a continuous delivery dashboard using Angular."
+                - "Proof Of Concept of GraphQL for micro service architecture."
+            technos:
+                java: ~
+                spring-boot: ~
+                docker: ~
+                jenkins: "Using Jenkins to deploy and test."
+                angular-js: "The CD dashboard was developed in Angular 6."
+                bootstrap: "While developing in Angular, we decided to use MDBootstrap as a front library."
+                rabbitmq: "Migrating RabbitMQ solution to Service Bus (Azure). RabbitMQ was used to manage workflows for the writing part of the website."
+                gcp-datastore: "Migrating Cassandra database to GCP Datastore, to store traceability logs of workflows."
+                gcp-pub-sub: "Made a PoC to determine if RabbitMQ could be replaced by Pub/Sub in the Pages Jaunes case."
+                azure-service-bus: "Using ServiceBus to replace RabbitMQ."
+            location: "Rennes, France"
+            url: "https://www.pagesjaunes.fr/"
+            image: "experiences/pagesjaunes.svg"
+
+        klaxoon:
+            start_date: "2019-09-01"
+            end_date: "2020-02-28"
+            name: "Klaxoon"
+            role: "Web developer Back-end"
+            description: "Klaxoon increases collaboration in meetings with tools like Storm, Challenge and Meeting apps, that allow everybody to participate and generate feedback on-site or remotely."
+            missions:
+                - "Contribute to the development of high traffic web platforms."
+                - "Develop in micro services architecture and with API culture first."
+                - "Participate in technical orientations and optimization research."
+                - "Development of unit and functional tests: PHPUnit, Prophecy, Behat."
+            technos:
+                php-7: ~
+                go: ~
+                shell: ~
+                symfony: ~
+                docker: ~
+                docker-compose: ~
+                gitlab-ci: ~
+                nginx: ~
+                rabbitmq: ~
+                mysql: ~
+                elasticsearch: ~
+                redis: ~
+            location: "Rennes, France"
+            url: "https://klaxoon.com/"
+            image: "experiences/klaxoon.png"
+
+        link-value:
+            start_date: "2020-04-01"
+            name: "Link-Value"
+            role: "Partner PHP/Symfony"
+            description: "Consulting company in P2P (partner to partner)."
+            missions:
+                - "Technical watch and seek to evolve."
+                - "Exchanges, feedback with the partners."
+                - "Organizes technical interviews."
+            technos:
+                php-7: ~
+                symfony: ~
+            location: "Paris, France"
+            url: "https://link-value.fr/fr"
+            image: "experiences/link-value.png"
+
+        france-tv:
+            start_date: "2020-04-01"
+            name: "FranceTV - VideoFactory"
+            role: "Full-Stack Developer"
+            description: "FranceTV is the French public national television broadcaster."
+            missions:
+                - "In charge of the group’s digital video creation workflows (replay+non-replay)."
+                - "Securing of video content, geoblocking, digital rights management."
+                - "Develop in micro services architecture."
+                - "Working on gateway API and event driven architecture."
+                - "Respect and improvement of code quality, testing, integration."
+                - "Developing new video command tool backoffice using hexagonal architure + DDD"
+            technos:
+                php-7: ~
+                symfony: ~
+                html-css-js: ~
+                bootstrap: ~
+                twig: ~
+                jquery:
+                docker: ~
+                docker-compose: "Using docker-compose to run our local environment."
+                gitlab-ci: "Using GitLab CI to build and run tests."
+                nginx: ~
+                rabbitmq: "Using RabbitMQ to send events notifications."
+                mysql: ~
+                mongodb: ~
+                elasticsearch: "ElasticSearch is used for the monitoring. We store all RabbitMQ messages."
+                redis: "Caching the sessions and API results to optimize some PHP scripts."
+                aws-sns-sqs: "SNS/SQS is used to send notification to our external partners."
+                aws-s3: "Amazon S3 is used to store our videos and captions."
+            location: "Paris, France"
+            url: "https://www.france.tv/"
+            image: "experiences/francetv.png"

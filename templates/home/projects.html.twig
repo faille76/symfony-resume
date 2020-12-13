@@ -1,0 +1,86 @@
+{% import "macro/date_helper.html.twig" as date_helper %}
+{% import "macro/techno_helper.html.twig" as techno_helper %}
+
+<h1 id="projects" class="text-center">{% trans %}projects.title{% endtrans %}</h1>
+
+<p class="font-italic grey-text text-center">{% trans %}projects.details{% endtrans %}</p>
+
+<section class="wow fadeIn mt-5" data-wow-delay="0.1s">
+    <div class="container">
+        <div class="card-columns">
+            {% for project in projects %}
+                <div class="card text-white bg-dark-custom m-2 hoverable" data-toggle="modal" data-target="#{{ project.projectId }}Project">
+                    <div class="card-header">{{ project.name }}</div>
+                    <div class="card-body text-primary">
+                        <p class="card-text">{{ project.description }}</p>
+
+                        <ul class="content-skills">
+                            {{ techno_helper.context(project.technoContexts) }}
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="modal fade" id="{{ project.projectId }}Project" tabindex="-1" role="dialog" aria-labelledby="{{ project.projectId }}Project"
+                     aria-hidden="true">
+                    <div class="modal-dialog modal-lg" role="document">
+                        <div class="modal-content bg-dark-custom">
+                            <div class="modal-header">
+                                <h5 class="modal-title" id="{{ project.projectId }}Project">{{ project.name }}</h5>
+                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                    <span aria-hidden="true">&times;</span>
+                                </button>
+                            </div>
+                            <div class="modal-body">
+
+                                <div class="timeline-content-info row">
+                                    <div class="timeline-content-info-title col-md-6 col-12">
+                                        <i class="fa fa-certificate" aria-hidden="true"></i>
+                                        {{ project.role }}
+                                    </div>
+
+                                    <div class="timeline-content-info-date col-md-6 col-12">
+                                        <i class="far fa-calendar-alt"></i>
+                                        {{ date_helper.date_interval(project.startDate, project.endDate) }}
+                                    </div>
+                                </div>
+
+                                <p class="mt-3">
+                                    {{ project.description }}
+                                </p>
+
+                                <div class="d-flex justify-content-center align-items-center h-100 mt-3">
+                                    {% if project.image is not null %}
+                                        <div class="col-md-3 d-none d-md-block">
+                                            <img src="{{ asset('images/' ~ project.image) }}" class="w-100" alt="{{ project.name }}" />
+                                        </div>
+                                    {% endif %}
+                                    <div class="{% if project.image is not null %}col-md-9{% endif %} col-12">
+                                        <p class="text-left">
+                                            {% for mission in project.missions %}
+                                                &bull; {{ mission }}<br />
+                                            {% endfor %}
+                                        </p>
+                                    </div>
+                                </div>
+
+                                {% if project.image is not null %}
+                                    <div class="d-block d-md-none">
+                                        <img src="{{ asset('images/' ~ project.image) }}" class="w-100" alt="{{ project.name }}" />
+                                    </div>
+                                {% endif %}
+
+                                {% if project.url is not null %}
+                                    <p class="mt-3"><a href="{{ project.url }}" target="_blank">{{ project.url }}</a></p>
+                                {% endif %}
+
+                                <ul class="content-skills mt-3">
+                                    {{ techno_helper.context(project.technoContexts) }}
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            {% endfor %}
+        </div>
+    </div>
+</section>

@@ -1,0 +1,5 @@
+twig:
+    default_path: '%kernel.project_dir%/templates'
+    globals:
+        google_recaptcha3_public: '%env(GOOGLE_RECAPTCHA3_PUBLIC)%'
+        google_analytics_key: '%env(GOOGLE_ANALYTICS_KEY)%'

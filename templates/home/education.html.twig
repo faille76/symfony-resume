@@ -1,0 +1,54 @@
+{% import "macro/date_helper.html.twig" as date_helper %}
+
+<h1 id="education" class="text-center">{% trans %}education.title{% endtrans %}</h1>
+
+<section class="cd-container cd-timeline cd-timeline-blue wow fadeIn mt-5" data-wow-delay="0.1s">
+    {% for education in educations %}
+        <div class="cd-timeline-block">
+            <div class="cd-timeline-img cd-timeline-img-blue"></div>
+
+            <div class="cd-timeline-content">
+                <h2 class="text-center">
+                    {% if education.url is not null %}<a href="{{ education.url }}" target="_blank">{% endif %}
+                    {{ education.shortName }} - {{ education.fullName }}
+                    {% if education.url is not null %}</a>{% endif %}
+                </h2>
+                <div class="timeline-content-info row">
+                    {% if education.score is not null %}
+                        <div class="timeline-content-info-title col-md-4 col-12">
+                            <i class="fa fa-certificate" aria-hidden="true"></i>
+                            {{ education.score }}
+                        </div>
+                    {% endif %}
+
+                    <div class="timeline-content-info-date col-md-4 col-12">
+                        <i class="far fa-calendar-alt"></i>
+                        {{ date_helper.date_interval(education.startDate, education.endDate) }}
+                    </div>
+
+                    <div class="timeline-content-info-location col-md-4 col-12">
+                        <i class="fas fa-location-arrow"></i>
+                        {{ education.location }}
+                    </div>
+                </div>
+
+                <p>{{ education.description }}</p>
+
+                <div class="d-flex justify-content-center align-items-center h-100 m-2">
+                    {% if education.image is not null %}
+                        <div class="col-md-3 d-md-block">
+                            <img src="{{ asset('images/' ~ education.image) }}" class="w-100" alt="{{ education.fullName }}"/>
+                        </div>
+                    {% endif %}
+                    <div class="{% if education.image is not null %}col-md-9{% endif %} col-12">
+                        <p class="text-left">
+                            {% for module in education.modules %}
+                                &bull; {{ module }}<br />
+                            {% endfor %}
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    {% endfor %}
+</section>

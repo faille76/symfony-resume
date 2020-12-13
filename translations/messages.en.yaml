@@ -1,0 +1,47 @@
+title: "Resume"
+description: "Web resume of"
+nav:
+    about: "About"
+    experiences: "Experiences"
+    education: "Education"
+    skills: "Skills"
+    projects: "Projects"
+    interests: "Centers of interest"
+    contact: "Contact"
+
+date:
+    since: "Since"
+
+about:
+    resume: "Resume"
+    contact: "Contact"
+
+experience:
+    title: "Experiences"
+
+education:
+    title: "Education"
+
+skills:
+    title: "Skills"
+    technical_skills: "Technical skills"
+    strength: "Strength"
+
+projects:
+    title: "Projects"
+    details: "Click on project to get more details."
+
+interests:
+    title: "Centers of interest"
+
+contact:
+    title: "Write to me:"
+    name: "Your name"
+    email: "Your email"
+    message: "Your message"
+    information: "Contact information"
+    form:
+        captcha_invalid: "Captcha invalid."
+        missing_field: "Missing field(s)."
+        message_sent: "Message sent."
+        internal_error: "Cannot send email, please send a normal email."

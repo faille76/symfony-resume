@@ -1,0 +1,3 @@
+controllers:
+    resource: ../../src/Infrastructure/Primary/Http/
+    type: annotation

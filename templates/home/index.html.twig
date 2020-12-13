@@ -1,0 +1,16 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+    <div class="text-white">
+        {% include 'home/experiences.html.twig' %}
+        {% include 'home/education.html.twig' %}
+        {% include 'home/skills.html.twig' %}
+        {% include 'home/projects.html.twig' %}
+        {% include 'home/interests.html.twig' %}
+        {% include 'home/contact.html.twig' %}
+
+        <p class="text-center">
+            <a href="https://github.com/faille76/symfony-resume" target="_blank">Would you like to see my resume on github?</a>
+        </p>
+    </div>
+{% endblock %}

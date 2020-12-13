@@ -1,0 +1,272 @@
+parameters:
+    projects:
+        picchase:
+            name: "PicChase"
+            start_date: "2018-02-01"
+            end_date: "2020-01-31"
+            role: "Architect lead developer"
+            description: "Final school project for three years consisting to relate journalist and particular user to sell an event picture for magazine."
+            missions:
+                - "Developing microservice architecture using Laravel and Symfony 4 for the back end of the application. (10 REST API)"
+                - "Developing the front end applications using Symfony 4 and MDBootstrap. (4 fronts)"
+                - "Using Google Cloud Platform services and NodeJS for asynchronous consumers, storage and algorithms. (4 workers)"
+                - "Developing supervision tools such as continuous delivery dashboard using Gitlab API and traceability workflow to handle issues faster."
+                - "Using MySQL as a principal Database engine and ELK for logging (infra + applicative)."
+                - "Testing environment with Gitlab CI / Jenkins."
+            technos:
+                php-7: ~
+                html-css-js: ~
+                shell: ~
+                symfony: "Developing gateways and orchestrator REST API, and front application."
+                laravel: "Developing CRUD REST API."
+                nodejs: "Developing NodeJS consumer to run asynchronous tasks."
+                docker: ~
+                docker-compose: "Installing a complex local environment with Docker-compose."
+                kubernetes: "Using Kubernetes in pre-prod and production environment."
+                gitlab-ci: "Deploying to production."
+                jenkins: "Running integration tests."
+                nginx: ~
+                bootstrap: ~
+                twig: ~
+                jquery: ~
+                mysql: ~
+                elasticsearch: "Installing ELK for traffic monitoring and log application."
+                gcp-datastore: "Using Datastore to log workflow's events."
+                gcp-pub-sub: "Pub/Sub was used to run asynchronous tasks."
+                gcp-storage: "Storing picture on Google Cloud Storage."
+                gcp-vision: "Google Cloud Vision was used to get picture characteristics and determine if a picture has similarities."
+                gcp-maps: ~
+            image: "projects/picchase.png"
+
+        swipeful:
+            name: "Swipeful"
+            start_date: "2019-02-01"
+            end_date: "2019-05-30"
+            role: "Back end developer and mobile developer"
+            description: "Application to organize your trips. We find interesting places to visit near a desired city or country. Then you have the possibility to save the place in a list."
+            missions:
+                - "Developing a REST API in NodeJS and MySQL to manages users and places."
+                - "Developing mobile application with Android Studio, Java."
+                - "Using GCP services for deployment and as a place provider (Google Maps Api)"
+            technos:
+                android: "Developing the mobile application with material design on Android Studio."
+                nodejs: "Developing REST API with JWT in two parts: CRUD and fetching data from Google Maps API."
+                docker: ~
+                gitlab-ci: "Running test and auto deploy to App Engine."
+                mysql: ~
+                gcp-app-engine: "Deploying application on App Engine."
+                gcp-maps: "Using GCP Maps to retrieve places near a location and metas."
+
+        epirank:
+            name: "Epirank"
+            start_date: "2016-01-01"
+            end_date: "2017-10-31"
+            role: "Creator"
+            description: "After the collection of the Epitech students information, the website can sort the students with many orders."
+            missions:
+                - "Synthesize student tracking information."
+                - "Module of follow up for all students used by administration staff."
+                - "Developing Export/import API to help administration staff."
+            technos:
+                php-7: ~
+                html-css-js: ~
+                python: "Developing a crawling script in Python to get all student's data every day."
+                nginx: ~
+                bootstrap: ~
+                twig: ~
+                jquery: ~
+                postgresql: ~
+            image: "projects/epirank.png"
+
+        netgame:
+            name: "NetGame"
+            start_date: "2010-01-01"
+            end_date: "2019-01-31"
+            role: "Creator"
+            description: "Web Browser gaming platform that reference Ogame. Developing a private server with the demands of the players for a better gaming comfort."
+            missions:
+                - "Developing the core game with many features."
+                - "Developing the front-end application."
+                - "Management of a support team."
+                - "Development of a support engine."
+                - "Developing many tools to manages players and server's metrics."
+            technos:
+                php-5: ~
+                php-7: ~
+                html-css-js: ~
+                bootstrap: ~
+                jquery: ~
+                smarty-php: "Developing the core game with Smarty PHP framework."
+                plesk: ~
+                vesta-cp: ~
+                mysql: ~
+                elasticsearch: "Logging players activities to Elastic."
+            image: "projects/ogame.png"
+
+        netcms:
+            name: "NetCMS"
+            start_date: "2013-01-01"
+            role: "Creator"
+            description: "A web interface that allows customers to easily configure their website like Wordpress (but home made)."
+            missions:
+                - "This is a base that allows easy installation of modules with an optimized framework (Symfony 5) and template management with Twig."
+                - "Using DDD, Hexagonal architecture, CQRS + EDA."
+                - "SEO Referencing and using a material design."
+                - "Multi language support."
+            technos:
+                php-5: ~
+                php-7: ~
+                html-css-js: ~
+                bootstrap: ~
+                jquery: ~
+                symfony: "Developing the CMS with Symfony 5."
+                smarty-php: "The first version was developed with SmartyPHP."
+                plesk: ~
+                vesta-cp: ~
+                mysql: ~
+                docker: ~
+                docker-compose: ~
+                gitlab-ci: ~
+            url: "https://github.com/faille76/netcms"
+            image: "projects/usl-badminton.png"
+
+        funodio:
+            name: "Funodio"
+            start_date: "2011-01-01"
+            end_date: "2012-01-01"
+            role: "Creator"
+            description: "With my passion for music, I developed a web radio with a music streaming service."
+            missions:
+                - "Developing with streaming external API."
+                - "With more than 100 auditors, we increased the size of the team (editorial, DJ, ...)."
+            technos:
+                php-5: ~
+                html-css-js: ~
+                jquery: ~
+                nginx: ~
+                mysql: ~
+            image: "projects/webradio.png"
+
+        zappy:
+            name: "Zappy"
+            start_date: "2017-06-01"
+            end_date: "2017-07-30"
+            role: "Lead developer"
+            description: "Group project to gather all the knowledge acquired during the two years of Epitech."
+            missions:
+                - "Network, memory, AI and graphics combined in C / C++."
+                - "Adding an administrator management (front-end application) to the web server developed in C++ using Unix Sockets."
+            technos:
+                c: ~
+                cpp: ~
+                php-7: "Developing an administrator web interface."
+                html-css-js: ~
+                twig: ~
+
+        ftrace:
+            name: "Ftrace"
+            start_date: "2017-04-01"
+            end_date: "2017-05-31"
+            role: "Unique developer"
+            description: "Trace is a program that allows an executable to be analyzed during execution."
+            missions:
+                - "Generate a call-graph, which explain a program's execution flow in detail."
+                - "Explaining syscall."
+            technos:
+                c: ~
+                shell: ~
+            url: "https://github.com/faille76/Ftrace"
+
+        sh42:
+            name: "42SH"
+            start_date: "2016-04-01"
+            end_date: "2016-06-30"
+            role: "Lead developer"
+            description: "The 42SH is a Epitech project. This is to reproduce a UNIX shell in C."
+            missions:
+                - "Management of simples commands, pipes and redirects, scripting, process management."
+                - "Getting a lot of knowledge in running linux such as management of subprocess."
+                - "Managing the missions and deadlines of a team."
+            technos:
+                c: ~
+                shell: ~
+            url: "https://github.com/faille76/42sh"
+            image: "projects/42sh.png"
+
+        corewar:
+            name: "Corewar"
+            start_date: "2016-03-01"
+            end_date: "2016-04-30"
+            role: "Lead developer"
+            description: "Developing a simulation of memory war between multiple ASM programs."
+            missions:
+                - "Making an ASM parser."
+                - "Managing a huge error handling."
+                - "Simulation memory organization."
+            technos:
+                c: ~
+                shell: ~
+
+        tetris:
+            name: "Tetris"
+            start_date: "2016-03-01"
+            end_date: "2016-04-01"
+            role: "Developer"
+            description: "Development tetris game terminal, added multiple options such as a ghost mode, an array of high-scores."
+            missions:
+                - "Adaptation to different terminals."
+                - "Creating a debug mode."
+                - "Ioctl handling."
+            technos:
+                c: ~
+                shell: ~
+            url: "https://github.com/faille76/Tetris"
+            image: "projects/tetris.png"
+
+        raytracer:
+            name: "Ray Tracer"
+            start_date: "2016-02-01"
+            end_dar: "2016-03-01"
+            role: "Unique developer"
+            description: "The project goal is to generate synthetic images from a scene file. All objects and light sources are configurable."
+            missions:
+                - "For this project, we are in a 3D environment, which for heavy computation."
+                - "Managing multi-threading."
+                - "You can move in any direction (x, y, z)."
+            technos:
+                c: ~
+                shell: ~
+            url: "https://github.com/faille76/Raytracer1"
+            image: "projects/raytracer.png"
+
+        tekdoom:
+            name: "TekDoom"
+            start_date: "2016-01-01"
+            end_date: "2016-02-01"
+            role: "Developer"
+            description: "Creating a 3D engine to display the blocks like minecraft."
+            missions:
+                - "Creating a 3D environment."
+                - "Real-time animation."
+                - "Generate maps and textures in real time."
+            technos:
+                c: ~
+                shell: ~
+            image: "projects/doom.png"
+
+        bistromatique:
+            name: "Bistromatique"
+            start_date: "2015-10-20"
+            end_date: "2015-10-25"
+            role: "Lead Developer"
+            description: "Creating a C calculator for calculating infinite numbers."
+            missions:
+                - "Management of parsing."
+                - "Error handling."
+                - "Priority calculations."
+                - "Multi-bases (hexadecimal, binary, ...)"
+            technos:
+                c: ~
+                shell: ~
+            image: "projects/bistro.png"
+

@@ -1,0 +1,36 @@
+<div class="view" id="about">
+    <div class="full-bg-img">
+        <div class="mask flex-center">
+            <div class="container text-center white-text wow fadeInUp">
+
+                <div class="d-block d-md-none">
+                    <img src="{{ asset("images/profile.jpg") }}" class="profile-picture rounded-circle img-fluid mx-auto" alt="{{ profile.firstName }} {{ profile.lastName }}" />
+                </div>
+
+                <div class="d-flex justify-content-center align-items-center h-100 mt-3">
+                    <div class="col-md-4 col-12 d-none d-md-block">
+                        <img src="{{ asset("images/profile.jpg") }}" class="profile-picture rounded-circle img-fluid" alt="{{ profile.firstName }} {{ profile.lastName }}" />
+                    </div>
+
+                    <div class="col-md-8 col-12 text-center">
+                        <h1>{{ profile.firstName }} {{ profile.lastName }}</h1>
+                        <div class="h3 font-italic">{{ profile.jobTitle }}</div>
+
+                        <p class="mt-4 font-italic">
+                            <i class="fas fa-quote-left"></i>
+                            {% for description in profile.description %}
+                                {{ description }}{% if not loop.last %}<br />{% endif %}
+                            {% endfor %}
+                            <i class="fas fa-quote-right"></i>
+                        </p>
+
+                        <p class="mt-4">
+                            <a href="{{ asset(profile.resumeFile) }}" class="btn btn-dark"><i class="fas fa-download"></i> {% trans %}about.resume{% endtrans %}</a>
+                            <a href="#contact" class="btn btn-dark"><i class="fas fa-envelope"></i> {% trans %}about.contact{% endtrans %}</a>
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

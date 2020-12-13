@@ -1,0 +1,56 @@
+{% import "macro/date_helper.html.twig" as date_helper %}
+{% import "macro/techno_helper.html.twig" as techno_helper %}
+
+<h1 id="experiences" class="text-center">{% trans %}experience.title{% endtrans %}</h1>
+
+<section class="cd-container cd-timeline cd-timeline-purple wow fadeIn mt-5" data-wow-delay="0.1s">
+    {% for experience in experiences %}
+        <div class="cd-timeline-block">
+            <div class="cd-timeline-img cd-timeline-img-purple"></div>
+
+            <div class="cd-timeline-content">
+                <h2 class="text-center">
+                    {% if experience.url is not null %}<a href="{{ experience.url }}" target="_blank">{% endif %}
+                    {{ experience.name }}
+                    {% if experience.url is not null %}</a>{% endif %}
+                </h2>
+                <div class="timeline-content-info row">
+                    <div class="timeline-content-info-title col-md-4 col-12">
+                        <i class="fa fa-certificate" aria-hidden="true"></i>
+                        {{ experience.role }}
+                    </div>
+
+                    <div class="timeline-content-info-date col-md-4 col-12">
+                        <i class="far fa-calendar-alt"></i>
+                        {{ date_helper.date_interval(experience.startDate, experience.endDate) }}
+                    </div>
+
+                    <div class="timeline-content-info-location col-md-4 col-12">
+                        <i class="fas fa-location-arrow"></i>
+                        {{ experience.location }}
+                    </div>
+                </div>
+
+                <p>{{ experience.description }}</p>
+
+                <div class="d-flex justify-content-center align-items-center h-100 m-2">
+                    {% if experience.image is not null %}
+                        <div class="col-md-3 d-md-block">
+                            <img src="{{ asset('images/' ~ experience.image) }}" class="w-100" alt="{{ experience.name }}" />
+                        </div>
+                    {% endif %}
+                    <div class="{% if experience.image is not null %}col-md-9{% endif %} col-12">
+                        <p class="text-left">
+                            {% for mission in experience.missions %}
+                                &bull; {{ mission }}<br />
+                            {% endfor %}
+                        </p>
+                    </div>
+                </div>
+                <ul class="content-skills">
+                    {{ techno_helper.context(experience.technoContexts) }}
+                </ul>
+            </div>
+        </div>
+    {% endfor %}
+</section>

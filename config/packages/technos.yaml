@@ -1,0 +1,180 @@
+parameters:
+    technos:
+        # Language
+        php:
+            label: "PHP"
+            type: language
+        php-7:
+            label: "PHP 7"
+            type: language
+            parent: php
+        php-5:
+            label: "PHP 5"
+            type: language
+            parent: php
+        html-css-js:
+            label: "HTML / CSS / JS"
+            type: language
+        go:
+            label: "GO"
+            type: language
+        c:
+            label: "C"
+            type: language
+        cpp:
+            label: "C++"
+            type: language
+        c-sharp:
+            label: "C#"
+            type: language
+        ocaml:
+            label: "OCaml"
+            type: language
+        java:
+            label: "Java"
+            type: language
+        python:
+            label: "Python"
+            type: language
+        shell:
+            label: "Shell"
+            type: language
+        android:
+            label: "Android Studio"
+            type: language
+
+        # Framework
+        symfony:
+            label: "Symfony"
+            type: framework
+        laravel:
+            label: "Laravel"
+            type: framework
+        nodejs:
+            label: "NodeJS"
+            type: framework
+        smarty-php:
+            label: "SmartyPHP"
+            type: framework
+        spring-boot:
+            label: "Spring Boot"
+            type: framework
+        angular-js:
+            label: "AngularJS"
+            type: framework
+
+        # Tools / deployment
+        docker:
+            label: "Docker"
+            type: tools
+        docker-compose:
+            label: "Docker-compose"
+            type: tools
+        kubernetes:
+            label: "Kubernetes"
+            type: tools
+        gitlab-ci:
+            label: "Gitlab CI"
+            type: tools
+        jenkins:
+            label: "Jenkins"
+            type: tools
+        nginx:
+            label: "Nginx"
+            type: tools
+        apache2:
+            label: "Apache2"
+            type: tools
+        varnish:
+            label: "Varnish"
+            type: tools
+
+        # Panel
+        plesk:
+            label: "Plesk"
+            type: panel
+        vesta-cp:
+            label: "VestaCP"
+            type: panel
+
+        # Library
+        bootstrap:
+            label: "Bootstrap"
+            type: library
+        twig:
+            label: "Twig"
+            type: library
+        jquery:
+            label: "JQuery"
+            type: library
+
+        # Message broker
+        rabbitmq:
+            label: "RabbitMQ"
+            type: message-broker
+
+        # Databases
+        mysql:
+            label: "MySQL"
+            type: database
+        postgresql:
+            label: "PostgreSQL"
+            type: database
+        mongodb:
+            label: "MongoDB"
+            type: database
+        elasticsearch:
+            label: "ElasticSearch"
+            type: database
+        redis:
+            label: "Redis"
+            type: database
+
+        # Cloud / services
+        gcp:
+            label: "Google Cloud Platform"
+            type: cloud
+        gcp-datastore:
+            label: "Datastore"
+            type: database
+            parent: gcp
+        gcp-pub-sub:
+            label: "Google Pub/Sub"
+            type: message-broker
+            parent: gcp
+        gcp-app-engine:
+            label: "Google App Engine"
+            type: paas
+            parent: gcp
+        gcp-storage:
+            label: "Google Storage"
+            type: storage
+            parent: gcp
+        gcp-vision:
+            label: "Google Cloud Vision"
+            type: api
+            parent: gcp
+        gcp-maps:
+            label: "Google Maps API"
+            type: api
+            parent: gcp
+
+        azure:
+            label: "Microsoft Azure"
+            type: cloud
+        azure-service-bus:
+            label: "ServiceBus"
+            type: message-broker
+            parent: azure
+
+        aws:
+            label: "Amazon Web Services"
+            type: cloud
+        aws-sns-sqs:
+            label: "SNS/SQS"
+            type: message-broker
+            parent: aws
+        aws-s3:
+            label: "Bucket S3"
+            type: storage
+            parent: aws
